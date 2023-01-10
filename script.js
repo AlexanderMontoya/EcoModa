@@ -62,4 +62,6 @@ let ropa=[
     },
 ]
 
+let conteiner=document.getElementById('');
+
 console.log(ropa.length);
