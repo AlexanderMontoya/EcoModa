@@ -62,6 +62,24 @@ let ropa=[
     },
 ]
 
-let conteiner=document.getElementById('');
+let conteiner=document.getElementById('conteiner_productos');
+let caja_producto="";
 
-console.log(ropa.length);
+for(i=0 ; i<ropa.length ; i++){
+    caja_producto+=`
+    <div class="producto">
+        <div class="img">
+            <img src="${ropa[i].imagen}" alt="" width="100">
+        </div>
+        <div class="detalles_producto">
+            <span>${ropa[i].nombre}</span>
+            <span class="precio">S/${ropa[i].precio}.00</span>
+            <button onclick="contar()">Agregar al Carrito</button>
+        </div>
+    </div>
+    `;
+}
+
+conteiner.innerHTML=caja_producto;
+
+console.log(ropa);
