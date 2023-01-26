@@ -61,6 +61,7 @@ let ropa=[
         'precio': 80
     },
 ]
+let mostrando=false;
 
 let conteiner=document.getElementById('conteiner_productos');
 let caja_producto="";
@@ -78,6 +79,17 @@ for(i=0 ; i<ropa.length ; i++){
         </div>
     </div>
     `;
+}
+
+function mostrar_enlaces(){
+    if(mostrando){
+        document.getElementById('enlaces_responsive').style.transform="translateX(-100%)";
+        mostrando=false;
+    }else{
+        document.getElementById('enlaces_responsive').style.transform="translateX(0%)";
+        mostrando=true;
+    }
+    
 }
 
 conteiner.innerHTML=caja_producto;

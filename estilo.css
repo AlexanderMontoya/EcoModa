@@ -13,6 +13,7 @@
 .navegacion{
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .encabezado{
@@ -62,6 +63,42 @@
 
 .contactos .redes_sociales a:hover{
     color: rgb(215, 242, 189);
+}
+
+.boton_enlaces{
+    display: none;
+    background-color: white;
+    padding: 10px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+}
+
+.enlaces_responsive{
+    position: absolute;
+    /* transform: translateY(-500px); */
+    transform: translateX(-100%);
+    width: 100%;
+    padding: 10px 0px;
+    background-color: rgb(62, 58, 58);
+    transition: transform 1s;
+}
+
+.enlaces_responsive li{
+    list-style: none;
+    margin-left: 50px;
+}
+
+.enlaces_responsive li a{
+    display: inline-block;
+    width: 150px;
+    padding: 10px 0px;
+    font-size: 18px;
+    color: white;
 }
 
 .enlaces{
@@ -297,6 +334,10 @@ main{
 }
 
 @media only screen and (max-width:769px){
+    .boton_enlaces{
+        display: block;
+    }
+    
     .header{
         height: 160px;
     }
