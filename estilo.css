@@ -255,3 +255,95 @@ main{
     background-color: white;
     border-radius: 50%;
 }
+
+.main-quienes-somos{
+    background-color: transparent;
+}
+
+.main-quienes-somos .title{
+    width: 100%;
+    background-color: rgb(215, 242, 189);
+    padding: 10px;
+}
+
+.main-quienes-somos .title h2{
+    font-family: "Agency FB";
+    font-size: 28px;
+    color: rgb(82, 82, 82);
+}
+
+.main-quienes-somos .box-info{
+    margin: 20px 0px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.main-quienes-somos .box-info h3{
+    font-size: 25px;
+    font-family: "Agency FB";
+    padding: 10px 0px;
+    color: rgb(112, 111, 111);
+}
+
+.main-quienes-somos .box-info .parrafo{
+    color: rgb(88, 87, 87);
+    font-family: "Agency FB";
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.main-quienes-somos .box-info ul{
+    margin-left: 20px;
+}
+
+@media only screen and (max-width:769px){
+    .header{
+        height: 160px;
+    }
+    .encabezado{
+        height: 160px;
+        padding: 10px 0px;
+        flex-direction: column;
+    }
+    .producto{
+        width: 45%;
+        margin-right: 10px;
+    }
+    .contactos{
+        display: none;
+    }
+
+    .contactos.bottom{
+        display: block;
+    }
+
+    .enlaces{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:426px){
+
+    
+
+    .producto{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .main-quienes-somos .box-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-quienes-somos .box-info img{
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width:321px){
+    main{
+        width: 90%;
+    }
+}
