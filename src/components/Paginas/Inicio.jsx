@@ -1,4 +1,5 @@
 import {ropas} from '../../data/ropa'
+import Product from '../Product'
 import './Inicio.css'
 export function Inicio(){
     return (
@@ -12,18 +13,7 @@ export function Inicio(){
             <div className="section__products">
                 {
                     ropas.map((ropa)=>(
-                       <div className='product'>
-                            <div className="product__content_img">
-                                <img src={ropa.imagen} alt="" className='product__img' width={200}/>
-                            </div>
-                            <div className="product__details">
-                                <span className='product__name'>{ropa.nombre}</span>
-                                <span className='product__price'>{ropa.precio}</span>
-                                <button className='product__add'>
-                                    Agregar al Carrito
-                                </button>
-                            </div>
-                       </div> 
+                       <Product key={ropa.id_ropa} props={ropa}/>
                     ))
                 }
             </div>
