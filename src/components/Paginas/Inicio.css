@@ -1,0 +1,97 @@
+.section{
+    width: 80%;
+    margin: auto;
+    background-color: var(--bg-section);
+    padding-bottom: 20px;
+}
+/*Inicio*/
+.section__content_title, .section__results{
+    width: 95%;
+    margin:auto;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgba(185, 175, 175, 0.608);
+}
+
+.section__title{
+    font-size: 30px;
+}
+
+.section__results{
+    padding: 10px 0px;
+}
+
+.section__products{
+    width: 95%;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Paginas*/
+.pages{
+    margin: 0px auto;
+    width: 200px;
+    background-color: rgb(164, 225, 106);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.pages__number{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    color: white;
+    border-left: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.pages__number--check{
+    border-left: none;
+    background-color: rgb(111, 216, 13);
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+/*Sobre Nosotros*/
+.about{
+    background-color: transparent;
+    font-family: var(--font-about);
+}
+
+.about__content_title{
+    background-color: rgb(215, 242, 189);
+    padding: 10px;
+}
+
+.about__title{
+    font-family: "Agency FB";
+    font-size: 28px;
+    color: var(--color-section-title);
+}
+
+.about__info{
+    margin: 20px 0px;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.about__subtitle{
+    font-size: 25px;
+    padding: 10px 0px;
+    color: var(--color-subtitle);
+}
+
+.about__paragraph{
+    color: var(--color-paragraph);
+    font-family: "Agency FB";
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.about__value{
+    margin-left: 20px;
+}
