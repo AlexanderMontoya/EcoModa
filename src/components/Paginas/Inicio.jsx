@@ -1,7 +1,11 @@
 import {ropas} from '../../data/ropa'
 import Product from '../Product'
+import { useContext } from 'react'
 import './Inicio.css'
+import { ProductContext } from '../../context/ProductContext';
 export function Inicio(){
+    const {products} = useContext(ProductContext);
+    
     return (
         <section className='section'>
             <div className="section__content_title">
@@ -12,7 +16,7 @@ export function Inicio(){
             </div>
             <div className="section__products">
                 {
-                    ropas.map((ropa)=>(
+                    products.map((ropa)=>(
                        <Product key={ropa.id_ropa} props={ropa}/>
                     ))
                 }

@@ -1,5 +1,6 @@
 import {Contactos} from '../Contactos'
-import {Navbar} from './Navbar'
+import {Navbar} from './Navbar';
+import {NavSearch} from './NavSearch';
 import './Header.css'
 export function Header(){
     return (
@@ -16,6 +17,7 @@ export function Header(){
                     <Contactos/>
                 </div>
                 <Navbar/>
+                <NavSearch/>
             </nav>
         </header>
     )

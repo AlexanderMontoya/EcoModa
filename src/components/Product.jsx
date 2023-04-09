@@ -1,4 +1,7 @@
+import { useContext } from "react"
+import { CartContext } from "../context/CartContext"
 function Product({props}){
+    const {addProduct}=useContext(CartContext);
     return (
         <div className='product'>
             <div className="product__content_img">
@@ -7,7 +10,16 @@ function Product({props}){
             <div className="product__details">
                 <span className='product__name'>{props.nombre}</span>
                 <span className='product__price'>S/. {props.precio}</span>
-                <button className='product__add'>
+                <button className='product__add' onClick={
+                        function () {
+                            addProduct({
+                                id_ropa: props.id_ropa,
+                                nombre: props.nombre,
+                                imagen: props.imagen,
+                                precio: props.precio
+                            })
+                        }
+                }>
                     Agregar al Carrito
                 </button>
             </div>
