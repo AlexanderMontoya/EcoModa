@@ -16,7 +16,9 @@ function Product({props}){
                                 id_ropa: props.id_ropa,
                                 nombre: props.nombre,
                                 imagen: props.imagen,
-                                precio: props.precio
+                                precio: props.precio,
+                                cantidad: 1,
+                                precio_total: props.precio
                             })
                         }
                 }>

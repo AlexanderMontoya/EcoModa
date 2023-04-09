@@ -1,9 +1,10 @@
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingBag } from "react-icons/fa";
+import { BiX} from "react-icons/bi";
 import { useState,useContext } from "react";
 import { CartContext } from "../context/CartContext";
 function Cart(){
     const [viewCart, setViewCart] = useState(false);
-    const {cart}= useContext(CartContext);
+    const {cart, contProducts, totalCart, deleteProduct, emptyCart}= useContext(CartContext);
 
     const ContentCart = ()=>{
         return (
@@ -12,17 +13,19 @@ function Cart(){
                     {
                         cart.map((element) => (
                             <div className="cart__product" key={element.id_ropa}>
-                                <img src={element.imagen} alt="" width={50} className="cart__img"/>
+                                <span className="cart__quantity">{element.cantidad}</span>
                                 <span className="cart__name">{element.nombre}</span>
-                                <span className="cart__price">S/. {element.precio}</span>
+                                <span className="cart__price">S/. {element.precio_total}</span>
+                                <button type="button" className="cart__btnDelete" onClick={()=>{deleteProduct(element)}}><BiX/></button>
                             </div>
                         ))
                     }
                 </div>
                 <div className="cart__details">
-                    Aqui iran los precios
+                    Total: S/.{totalCart}
                 </div>
-            </>
+                <button type="button" className="cart__btnEmpty" onClick={()=>{emptyCart()}}>Vaciar carrito</button>
+            </> 
             
         )
     }
@@ -30,8 +33,8 @@ function Cart(){
     return (
         <div className="cart">
             <button className="cart__button" onClick={()=>{setViewCart(!viewCart)}}>
-                <FaShoppingCart/>
-                <div className="cart__counter">{cart.length}</div>    
+                <FaShoppingBag/>
+                <div className="cart__counter">{contProducts}</div>
             </button>
             <div className={!viewCart?"cart__content":"cart__content view"}>
                 <div className="cart__title">Mi pedido</div>
