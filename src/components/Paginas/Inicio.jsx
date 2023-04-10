@@ -15,10 +15,10 @@ export function Inicio(){
                 <span>Viendo 1-10 de 50 resultados</span>
             </div>
             <div className="section__products">
-                {
+                {   products.length>=1?
                     products.map((ropa)=>(
                        <Product key={ropa.id_ropa} props={ropa}/>
-                    ))
+                    )):<div className='section__message'>No se encontraron productos</div>
                 }
             </div>
             <div className="pages">

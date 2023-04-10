@@ -20,6 +20,14 @@
     padding: 10px 0px;
 }
 
+.section__message{
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.786);
+}
+
 .section__products{
     width: 90%;
     margin: 40px auto;

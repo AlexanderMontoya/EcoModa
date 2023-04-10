@@ -4,6 +4,7 @@ export function CartContextProvider(props){
     const [cart , setCart] = useState([])
     const [totalCart , setTotalCart] = useState(0)
     const [contProducts, setContProducts] = useState(0)
+    /*Esta es mi rama 1 */
     function addProduct(product){
         if(cart.find(item =>item.id_ropa === product.id_ropa)){
             const verifyProduct = cart.map( pro=>
