@@ -3,11 +3,11 @@ import {Inicio} from './components/Paginas/Inicio'
 import {Hombres} from './components/Paginas/Hombres'
 import {About} from './components/Paginas/About'
 import {Footer} from './components/Footer/Footer'
-import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom'
+import {HashRouter, Navigate, Route, Routes} from 'react-router-dom'
 import './App.css'
 function App(){
   return <>
-    <BrowserRouter>
+    <HashRouter>
       <Header/>
       
       <main className='main'>
@@ -20,7 +20,7 @@ function App(){
       </Routes>  
       </main>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   </>
 }
 

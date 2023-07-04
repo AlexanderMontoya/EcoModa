@@ -9,7 +9,7 @@ export function Header(){
                 <div className="nav__head">
                     <div className="logo">
                         <a href="#" className="logo__link">
-                            <img src="/logo.png/" alt="logo ECOMODA" className="logo__image" width={50}/>
+                            <img src="logo.png" alt="logo ECOMODA" className="logo__image" width={50}/>
                             <h1 className="logo__title">EcoModa</h1>
                         </a>
                         <span className="logo__slogan">Unimos Moda y cuidamos el medio Ambiente</span>
